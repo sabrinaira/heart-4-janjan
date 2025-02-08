@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 import Welcome from './Welcome';
 import Ending from './End';
 import './App.css';
@@ -6,11 +7,9 @@ import './App.css';
 function App() {
   // State to track whether the app has started
   const [started, setStarted] = useState(false);
-
   // State to track whether the app has ended
   const [ended, setEnded] = useState(false);
 
-  // List of reasons
   const reasons = [
     'You know I love you, right?',
     'very very much!',
@@ -19,18 +18,23 @@ function App() {
     '...and sometimes cry haha!',
     "I'm kidding... maybe.",
     'I also miss your hugs.',
-    'I miss the long night rides we had together.',
     'I always reminisce on our adventures together.',
-    'You inspire me to be a better person.',
+    'I miss the long night rides,',
+    "The dates we've had,",
+    "and the movies we've watched together!",
+    'Alfie...',
     'You’re also my best friend and my soulmate.',
+    'You inspire me to be a better person.',
+    'Besides your wisdom,',
+    'Your cheeks are also so very cute!',
+    'hehehehehehehe',
     'You still need to teach me some Yu-Gi-Oh hehehe',
-    'And maybe some more Pokémon lore too haha',
+    'and maybe some more Pokémon lore too lol.',
     'I also love how you always support my dreams.',
-    'Your cheeks are also so very cute! hehe',
     'You make me feel loved every single day,',
     "Even if you're only online once a week.",
     'Anyway...',
-    'I know both of us have been busy,',
+    'I know both of us have been busy with our lives,',
     'Especially while being far apart',
     'But I hope this gift is enough to show my love for you,',
     "for this Valentine's Day.",
@@ -64,13 +68,27 @@ function App() {
       ) : ended ? (
         <Ending onRestart={restartApp} />
       ) : (
-        <div className='container'>
-          <h1>💖</h1>
-          <p id='reason'>{reasons[currentIndex]}</p>
-          <button id='generate-btn' onClick={showNextReason}>
-            Tell Me More
-          </button>
-        </div>
+        <AnimatePresence mode='wait'>
+          <motion.div
+            key={currentIndex} // Unique key for each reason to trigger animation
+            className='container'
+            initial={{ opacity: 0, x: 100 }} // Start off-screen to the right
+            animate={{ opacity: 1, x: 0 }} // Animate to visible and in place
+            exit={{ opacity: 0, x: -100 }} // Exit off-screen to the left
+            transition={{ duration: 0.5 }} // Animation duration
+          >
+            {/* <h1>💖</h1> */}
+            <p id='reason'>{reasons[currentIndex]}</p>
+            <motion.button
+              id='generate-btn'
+              onClick={showNextReason}
+              whileHover={{ scale: 1.1 }} // Scale up on hover
+              whileTap={{ scale: 0.9 }} // Scale down on click
+            >
+              Tell Me More
+            </motion.button>
+          </motion.div>
+        </AnimatePresence>
       )}
     </div>
   );

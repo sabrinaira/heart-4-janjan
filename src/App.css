@@ -83,3 +83,7 @@ button {
 button:hover {
   background-color: #b71c1c; /* Darker red on hover */
 }
+
+.container, .ending-container, .welcome-container {
+  overflow: hidden; /* Prevent content from overflowing during animations */
+}
