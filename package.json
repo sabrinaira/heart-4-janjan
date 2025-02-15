@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.1.0",
   "type": "module",
-  "homepage": "https://sabrinaira.github.io/heart-4-janjan",
+  "homepage": "https://sabrinaira.github.io/heart-4-janjan/",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
