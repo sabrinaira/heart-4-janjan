@@ -2,7 +2,7 @@
   background-color: #ffffff;
   padding: 2rem;
   border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 8px #8708451a;
   text-align: center;
 }
 
@@ -17,7 +17,7 @@
 }
 
 .welcome-container button {
-  background-color: #d32f2f;
+  background-color: #ee57a2;
   color: white;
   border: none;
   padding: 0.75rem 1.5rem;
@@ -28,14 +28,14 @@
 }
 
 .welcome-container button:hover {
-  background-color: #b71c1c;
+  background-color: #d1257b;
 }
 
 /* App */
 body {
   font-family: 'Arial', sans-serif;
-  background-color: #ffebee; /* Light pink background */
-  color: #d32f2f; /* Dark red text */
+  background-color: #ffc7e9; /* Light pink background */
+  color: #d32f81; /* Dark red text */
   text-align: center;
   margin: 0;
   padding: 0;
@@ -56,7 +56,7 @@ body {
   background-color: #ffffff;
   padding: 2rem;
   border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 8px #8708451a;
 }
 
 h1 {
@@ -70,7 +70,7 @@ h1 {
 }
 
 button {
-  background-color: #d32f2f; /* Dark red button */
+  background-color: #f23c97; /* Dark red button */
   color: white;
   border: none;
   padding: 0.75rem 1.5rem;
@@ -81,7 +81,7 @@ button {
 }
 
 button:hover {
-  background-color: #b71c1c; /* Darker red on hover */
+  background-color: #d1257b; /* Darker red on hover */
 }
 
 .container, .ending-container, .welcome-container {

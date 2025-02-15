@@ -9,7 +9,8 @@ function End({ onRestart }) {
       animate={{ opacity: 1, y: 0 }} // Animate to visible and in place
       transition={{ duration: 1 }} // Animation duration
     >
-      <h1>That's all for now! 💖</h1>
+      <h1>💖 Happy Valentine's Day! 💖</h1>
+      <h2>That's all for now!</h2>
       <p>Thank you for being the best boyfriend ever.</p>
       <motion.button
         onClick={onRestart}

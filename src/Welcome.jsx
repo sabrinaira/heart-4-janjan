@@ -1,4 +1,4 @@
-import React from 'react';
+import PropTypes from 'prop-types';
 import { motion } from 'framer-motion';
 
 function Welcome({ onStart }) {
@@ -20,5 +20,11 @@ function Welcome({ onStart }) {
     </motion.div>
   );
 }
+
+// Add propTypes validation
+Welcome.propTypes = {
+  onStart: PropTypes.func.isRequired, // onStart is a required function
+};
+
 
 export default Welcome;
